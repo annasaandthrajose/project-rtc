@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+
+        <table border="1" class="table">
+            <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>body</th>
+            
+            
+            
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr> 
+                    
+                    <td>{{userid}}</td>
+                    
+                    <td>{{id}}</td>
+                    <td >{{title}}</td>
+                    <td>{{body}}</td>
+                </tr>
+            </tbody>
+                </table>
+    
+    
+
+   
+    
+
+    
+
+  
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">UserID</label>
+      <input [(ngModel)]="userid" type="text" class="form-control" id="exampleInputEmail1" name="us"aria-describedby="emailHelp">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">ID</label>
+      <input [(ngModel)]="id"type="text" class="form-control" name="id"id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">TITLE</label>
+        <input type="text" [(ngModel)]="title" class="form-control" name="tit"id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">BODY</label>
+        <input  [(ngModel)]="body"type="text" class="form-control" name="body"id="exampleInputPassword1">
+      </div>
+    <button  type="submit" (click)="addnew()" class="btn btn-primary">addnew</button>
+    <br> <br>
+    <button  type="submit" (click)="edit()" class="btn btn-primary">edit</button>
+    <br> <br>
+    <button  type="submit" (click)="delete()" class="btn btn-primary">Delete</button>
+
+  </form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
